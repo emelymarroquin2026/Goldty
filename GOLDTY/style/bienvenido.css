@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    background-image: url('../IMG/fondo2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.welcome-container {
+    text-align: center;
+    background: linear-gradient(135deg, #fffefb, #fffcf9);
+    color: rgb(0, 0, 0);
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-width: 600px;
+    margin: 50px auto;
+    animation: fadeIn 1s ease-in-out;
+    overflow: hidden;
+}
+
+.welcome-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+/* Efecto máquina de escribir */
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid rgb(0, 0, 0);
+    white-space: nowrap;
+    animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(0, 0, 0); }
+}
+
+.welcome-container .goldty {
+    color: #f7c03e;
+    text-shadow: 0 0 5px rgba(255,255,255,0.6);
+}
+
+.welcome-container p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.welcome-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-welcome,
+.btn-secondary {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-welcome {
+    background-color: #45a049;
+    color: #000000;
+}
+
+.btn-welcome:hover {
+    transform: scale(1.05);
+    background-color: #68c76d;
+}
+
+
+/* Animación general */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive tablet */
+@media (max-width: 768px) {
+    .welcome-container {
+        max-width: 90%; /* ocupa casi todo el ancho */
+        padding: 30px 15px;
+        margin: 30px auto;
+    }
+
+    .welcome-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .welcome-container p {
+        font-size: 1rem;
+    }
+
+    .btn-welcome,
+    .btn-secondary {
+        width: auto;      
+        padding: 12px 25px; 
+        display: inline-block;
+        text-align: center;
+    }
+
+    .welcome-buttons {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Responsive móvil */
+@media (max-width: 480px) {
+    body {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .welcome-container {
+        max-width: 95%;
+        padding: 20px 10px;
+        margin: 20px auto;
+    }
+
+    .welcome-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-container p {
+        font-size: 0.95rem;
+    }
+    
+    .btn-welcome,
+    .btn-secondary {
+        width: auto;       /* no ocupar todo el contenedor */
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .welcome-buttons {
+        flex-direction: row; /* los dejamos en fila */
+        justify-content: center;
+        gap: 8px;
+    }
+}

@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    background-image: url('../IMG/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header {
+    background-color: #f7c03e;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    user-select: none;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+    z-index: 100;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
+    padding: 40px;
+    object-fit: contain;
+}
+
+.back-btn {
+    background: transparent;
+    border-radius: 50%;
+    border: none;
+    width: 36px;
+    height: 36px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: transparent;
+}
+
+.header h1 {
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    flex: 1;
+    pointer-events: none;
+}
+
+.form-container {
+    background-color: white;
+    width: 100%;
+    max-width: 330px;
+    margin-top: 80px;
+    margin-right: 130px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1.goldty {
+    margin: 0;
+    color: #f7c03e;
+    font-size: 28px;
+}
+
+h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h3 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.input-wrapper {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #f7c03e;
+}
+
+.btn {
+    background-color: #45a049;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #54b159;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    body {
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .form-container {
+        margin: 100px auto 0 auto;
+        margin-right: 0;
+    }
+
+    .header {
+        font-size: 16px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 14px;
+        padding: 0 8px;
+    }
+
+    .header h1 {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

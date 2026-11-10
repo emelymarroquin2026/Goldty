@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-image: url('../IMG/fondo2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    margin-top: 35px;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.header {
+  background-color: #f7c03e;
+  height: 56px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0 12px;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  user-select: none;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+  z-index: 100;
+}
+
+.header h1 {
+  font-weight: 700;
+  font-size: 22px;
+  color: white;
+  margin: 0;
+  justify-self: center;
+  pointer-events: none;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.back-btn {
+  background:transparent;
+  border-radius: 50%;
+  border: none;
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: transparent;
+}
+
+.section-label {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 15px 0 8px;
+  font-size: 16px;
+}
+
+.urgent { background-color: #de4b4b; }
+.important { background-color: #f7a73e; }
+.not-important { background-color: #4caf50; }
+
+.task-list {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.task {
+  background-color: #79b67bc5;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.task span {
+  margin: 3px 0;
+}
+
+.task-title {
+  font-weight: bold;
+}
+
+.time {
+  font-size: 13px;
+  color: #444;
+}
+
+@media (min-width: 600px) {
+  .task {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .task-title {
+    flex: 1;
+    margin-left: 10px;
+  }
+
+  .task span {
+    margin: 0;
+  }
+}

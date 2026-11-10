@@ -1,0 +1,687 @@
+.background{
+  background-color: #fffcf8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* estilo pa nav */
+.goldty-header {
+  background-color: #f7c03e;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Contenedor de nav */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Nav */
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-close{
+  display: none;
+}
+
+.menu-toggle{
+  display: none;
+}
+
+/*Linea de abajito*/
+
+.main-nav li {
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.main-nav li:hover {
+  color: #ffffff;
+}
+
+.main-nav li:hover::after {
+  width: 100%;
+}
+
+/* login registro */
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.login-button {
+  background-color: #6bb96f;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #88d18c;
+  color: #ffffff;
+}
+
+/* head img */
+.header-img img {
+  width: 1327px;
+  height: auto;
+  display: block;
+  padding: 5px;
+}
+
+/* Texto */
+
+.text h2#goldty {
+  font-size: 2.5rem;
+  color: #f7c03e;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif
+}
+
+
+
+.text_{
+    text-align: center;
+    color: #f7c03e;
+    font-family: 'Lato', sans-serif;
+}
+
+.texto{
+    padding: 25px;
+    color: #000000;
+    font-family: 'Lato', sans-serif;
+}
+
+/*V Y M*/
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* espacio entre tarjetas */
+  flex-wrap: wrap; /* permite que se acomoden en pantalla pequeña */
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: #85AA70;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  flex: 1;
+  max-width: 75%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff8ee;
+  font-family: 'Lato', sans-serif;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #fff8ee;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.card-img {
+  width: 100px;      
+  height: auto;      
+  margin: 0 auto 15px auto; 
+  display: block;
+}
+
+
+/*beneficios*/
+
+.text-b h2#beneficios {
+  font-size: 2.5rem;
+  color: #f7c03e;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+  padding: 25px;
+}
+
+.text-b_{
+    text-align: center;
+    color: #f7c03e;
+    font-family: 'Lato', sans-serif;
+}
+
+.texto-b{
+    color: #000000;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+
+.card-b {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  flex: 1;
+  max-width: 75%;
+}
+
+.card-b:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-b {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.card-title-b {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+.card-text-b {
+  font-size: 0.95rem;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+}
+
+.beneficios .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 5px; /* espacio para las tarjetas */
+}
+
+.texto-b{
+  padding: 20px;
+}
+
+.card-img-b {
+  width: 100px;      
+  height: auto;      
+  margin: 0 auto 15px auto; 
+  display: block;
+}
+
+/*body-img*/
+
+.body-img img {
+  display: block;
+  margin: 0 auto;
+}
+
+/*Como se usa*/
+
+.como-usar {
+  font-family: 'Lato', sans-serif;
+  background-color: #fffcf8;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.como-usar-titulo {
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f7c03e;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+.como-usar-sub {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #444;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-family: 'Lato', sans-serif;
+}
+
+.como-usar-pasos {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  border-top: 1px solid #e1b96a;
+}
+
+.como-usar-pasos li {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #e1b96a;
+  font-size: 18px;
+  color: #333;
+}
+
+.pasos-numero {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 20px;
+  width: 40px;
+  color: #e1b96a;
+}
+
+/*new act img*/
+
+.new-img img {
+  display: block;
+  margin: 0 auto;
+}
+
+/*Try*/
+.register-invitation {
+  background-color: #fffcf8;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.register-invitation h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.register-invitation p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.register-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.register-input input {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  width: 250px;
+}
+
+.signup-button {
+  padding: 10px 20px;
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+  background-color: #45a049;
+}
+
+/* móvil*/
+@media (max-width: 768px) {
+
+/* Ocultar botones en pantalla grande */
+.menu-toggle, .menu-close {
+  display: none;
+}
+
+/* Estilos solo en pantallas pequeñas */
+@media (max-width: 768px) {
+
+  .menu-toggle, .menu-close {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 1001;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    background-color: #f7c03e;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .main-nav.visible {
+    transform: translateX(0%);
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .listaC {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 4rem;
+    list-style: none;
+    padding: 0;
+    color: #ffffff;
+    font-size: 1.2rem;
+  }
+}
+
+
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .card-b {
+    max-width: 90%;
+  }
+
+  .beneficios .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .register-input {
+    flex-direction: column;
+  }
+
+  .register-input input,
+  .signup-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .header-img img,
+  .body-img img,
+  .new-img img {
+    width: 100% !important;
+  }
+}
+
+
+/* Mostrar botones */
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Ocultar botones del menú hamburguesa */
+.cel-boton {
+  display: none;
+}
+
+/* mostrar botones dentro del menú */
+@media (max-width: 768px) {
+  .header-actions {
+    display: none;
+  }
+
+  .cel-boton {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+ 
+  .header-img img,
+  .body-img img,
+  .new-img img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .card-b {
+    max-width: 90%;
+  }
+
+  .beneficios .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+
+  .register-input {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .register-input input,
+  .signup-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .text h2#goldty,
+  .text-b h2#beneficios,
+  .como-usar-titulo {
+    font-size: 2rem;
+  }
+
+  .como-usar-sub {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .nav-container {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .header-actions {
+    width: 100%;
+    gap: 8px;
+  }
+
+  /* Imágenes */
+  .header-img img,
+  .body-img img,
+  .new-img img {
+    width: 100%;
+  }
+
+  /* Cards V y M */
+  .card, .card-b {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .card-title, .card-title-b {
+    font-size: 1.1rem;
+  }
+
+  .card-text, .card-text-b {
+    font-size: 0.85rem;
+  }
+
+  /* Beneficios */
+  .beneficios .row {
+    gap: 15px;
+  }
+
+  /* Como usar */
+  .como-usar {
+    padding: 20px 10px;
+  }
+
+  .como-usar-titulo {
+    font-size: 1.8rem;
+  }
+
+  .como-usar-sub {
+    font-size: 16px;
+  }
+
+  .pasos-numero {
+    font-size: 16px;
+    width: 35px;
+  }
+
+  /* Registro / Try */
+  .register-input input,
+  .signup-button {
+    width: 100%;
+  }
+}

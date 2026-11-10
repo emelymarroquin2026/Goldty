@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    background-image: url('../IMG/fondo2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 56px 0 0; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+/* HEADER */
+.header {
+  background-color: #f7c03e;
+  height: 56px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0 12px;
+  position: fixed;
+  width: 100%; /* ✅ reemplazamos el ancho fijo */
+  top: 0;
+  left: 0;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  user-select: none;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+  z-index: 100;
+}
+
+.header h1 {
+  font-weight: 700;
+  font-size: 22px;
+  color: white;
+  margin: 0;
+  justify-self: center;  
+  pointer-events: none;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.back-btn {
+  background:transparent;
+  border-radius: 50%;
+  border: none;
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: transparent;
+}
+
+/* ACTIVIDAD DETALLE */
+.actividad-detalle {
+    width: 90%;              
+    max-width: 900px;        
+    background: none;
+    padding: 25px 30px;
+    border-radius: 18px;
+    box-shadow: none;
+    margin-top: 80px; /* espacio para el header */
+}
+
+/* Contenido */
+.actividad-detalle h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.actividad-detalle p {
+  font-size: 16px;
+  color: #555;
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.actividad-detalle strong {
+  color: #222;
+}
+
+/* Enlace volver */
+.volver {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  color: #f5b400;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.volver:hover {
+  color: #d49f00;
+}
+
+/* Cabecera y contenido de actividad */
+.actividad-header {
+  background-color: #c62828;
+  padding: 15px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.actividad-header h2 {
+  margin: 0;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+
+.actividad-contenido {
+  background-color: #ffe5e5;
+  padding: 25px 30px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+/* Switch */
+.form-switch {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+  margin-top: 15px;
+}
+
+.form-switch input {
+  display: none;
+}
+
+.form-switch i {
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: background 0.3s;
+}
+
+.form-switch i::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.form-switch input:checked + i {
+  background: #28a745;
+}
+
+.form-switch input:checked + i::before {
+  transform: translateX(22px);
+}
+
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .actividad-detalle {
+    padding: 25px;
+    margin-top: 70px;
+  }
+
+  .actividad-header h2 {
+    font-size: 20px;
+  }
+
+  .actividad-contenido p {
+    font-size: 15px;
+  }
+
+  .volver {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 70px; 
+  }
+
+  .header {
+    grid-template-columns: auto 1fr auto;
+    padding: 10px 8px;
+    height: auto;
+  }
+
+  .logo img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .actividad-detalle {
+    margin: 10px auto;
+    padding: 15px 15px;
+  }
+
+  .actividad-header h2 {
+    font-size: 18px;
+  }
+
+  .actividad-contenido p {
+    font-size: 14px;
+  }
+
+  .volver {
+    font-size: 14px;
+  }
+
+  .form-switch {
+    font-size: 14px;
+  }
+
+  .form-switch i {
+    width: 40px;
+    height: 20px;
+  }
+
+  .form-switch i::before {
+    width: 16px;
+    height: 16px;
+  }
+
+  .form-switch input:checked + i::before {
+    transform: translateX(16px);
+  }
+}

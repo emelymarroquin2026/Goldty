@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    background-image: url('../IMG/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+
+.header {
+    background-color: #f7c03e;
+    height: 56px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 0 12px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    user-select: none;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+    z-index: 100;
+}
+
+.header h1 {
+    position: static;
+    font-weight: 700;
+    font-size: 22px;
+    color: white;
+    margin: 0;
+    justify-self: center; 
+    pointer-events: none;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.back-btn {
+    background:transparent;
+    border-radius: 50%;
+    border: none;
+    width: 36px;
+    height: 36px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: transparent;
+}
+
+
+.editar-perfil-container {
+    width: 350px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background:  #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 22px 0;
+    font-weight: bold;
+}
+
+
+.form-editar-perfil label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form-editar-perfil input[type="text"],
+.form-editar-perfil input[type="number"],
+.form-editar-perfil input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-editar-perfil input:focus {
+    border-color: #f7c03e; 
+    outline: none; 
+}
+
+/* FOTO DE PERFIL */
+.foto-avatar {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 10px auto;
+    border: 3px solid  #85AA70;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label[for="foto"] {
+    display: block;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+/* BOTONES */
+.btn-guardar, .btn-cancelar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    width: auto;
+}
+
+.btn-guardar {
+    background-color: #85AA70;
+    color: white;
+}
+
+.btn-guardar:hover {
+    background-color: #b0e27b;
+}
+
+.btn-cancelar {
+    background-color: #e53935;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-cancelar:hover {
+    background-color: #f3524f;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .editar-perfil-container {
+        margin: 100px auto;
+        width: 80%;
+    }
+    .header h1 {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .editar-perfil-container {
+        width: 100%;
+        margin-top: 100px;
+        padding: 15px;
+    }
+    .header {
+        font-size: 16px;
+        padding: 0 8px;
+    }
+    .header h1 {
+        font-size: 18px;
+    }
+    .logo img {
+        width: 32px;
+        height: 32px;
+    }
+    .foto-avatar {
+        width: 100px;
+        height: 100px;
+    }
+}

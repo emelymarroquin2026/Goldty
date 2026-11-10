@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffcf8;
+  color: #333;
+}
+
+.header {
+  background-color: #f7c03e;
+  height: 56px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0 12px;
+  position: fixed;
+  width:  1320px;
+  top: 0;
+  left: 0;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  user-select: none;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+  z-index: 100;
+}
+
+.header h1 {
+  /* Elimina posición absoluta */
+  position: static;
+  font-weight: 700;
+  font-size: 22px;
+  color: white;
+  margin: 0;
+  justify-self: center;  /* Centra el título horizontalmente */
+  pointer-events: none;
+}
+
+
+
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.back-btn {
+  background:transparent;
+  border-radius: 50%;
+  border: none;
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: transparent;
+}
+
+.hero {
+  background-color: #85AA70;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.info {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.timer-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+#timer {
+  font-size: 60px;
+  margin: 20px 0;
+  color: #f7c03e;
+}
+
+#session-label {
+  font-size: 24px;
+  color: #333;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #7cb342;
+  color: white;
+  border-radius: 5px;
+}
+
+.buttons button:hover {
+  background-color: #e5533c;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+
+/* ESTILO ACTUALIZADO PARA LA SECCIÓN CUSTOM-SETTINGS */
+.custom-settings {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.custom-settings label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  background-color: #f7f7f7;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.custom-settings input[type="number"] {
+  padding: 8px 10px;
+  width: 70px;
+  margin-top: 6px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-settings input[type="number"]:focus {
+  outline: none;
+  border-color: #88b04b;
+  box-shadow: 0 0 8px rgba(136, 176, 75, 0.4);
+  background-color: #fff;
+}
+
+.custom-settings button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.custom-settings button:hover {
+  background-color: #555;
+}
+
+#pauseBtn {
+  background-color: #f7c03e;
+}
+
+#pauseBtn:hover {
+  background-color: #e59400;
+}

@@ -1,0 +1,282 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #1a1a1a;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    background-image: url('../IMG/fondo2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 56px 0 0; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+/* Contenedor principal */
+.container {
+  width: 100%;
+  max-width: 480px;
+  background: #e98f8dc9;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.header {
+  background-color: #f7c03e;
+  height: 56px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0 12px;
+  position: fixed;
+  width:  100%;
+  top: 0;
+  left: 0;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  user-select: none;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+  z-index: 100;
+}
+
+.header h1 {
+  position: static;
+  font-weight: 700;
+  font-size: 22px;
+  color: white;
+  margin: 0;
+  justify-self: center; 
+  pointer-events: none;
+}
+
+
+
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.back-btn {
+  background:transparent;
+  border-radius: 50%;
+  border: none;
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: transparent;
+}
+
+
+.urgent-box {
+  background-color: #e53935;
+  color: white;
+  padding: 14px 20px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 14px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Lista de tareas */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+
+.actividad-link {
+  text-decoration: none;
+  color: inherit;
+  margin: 8px 20px;
+  border-radius: 12px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.actividad-link:hover {
+  background-color: #e64946d8;
+}
+
+/* Círculo rojo pequeño para indicar urgencia */
+.circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ff3b30;
+  margin-right: 14px;
+  flex-shrink: 0;
+}
+
+/* Contenido de la actividad */
+.activity-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Título de actividad */
+.titulo {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fecha y hora */
+.fecha-hora {
+  font-size: 13px;
+  color: #8e8e93;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+
+.fecha-hora::before {
+  content: "⏰";
+  font-size: 13px;
+}
+
+/* Mensaje cuando no hay actividades */
+.task-list p {
+  text-align: center;
+  color: #8e8e93;
+  font-style: italic;
+  padding: 30px 20px;
+  user-select: none;
+}
+
+  .edit-btn {
+    background: #f7c03e;
+    border-radius: 12px;
+    padding: 6px 12px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: auto;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+  }
+  .edit-btn:hover {
+    background-color: #45a049;
+    color: #222;
+  }
+
+  .actividad-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .delete-btn {
+  background-color: #f7c03e;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-left: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .container {
+    max-width: 75%;
+    margin: auto;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .titulo {
+    font-size: 14px;
+  }
+
+  .edit-btn, .delete-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 8px;
+  }
+
+  .header h1 {
+    font-size: 16px;
+  }
+
+  .actividad-link {
+    margin: 6px 10px;
+    padding: 10px 0;
+  }
+
+  .circle {
+    margin-right: 10px;
+  }
+
+  .titulo {
+    font-size: 13px;
+  }
+
+  .fecha-hora {
+    font-size: 12px;
+  }
+
+  .edit-btn, .delete-btn {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+}

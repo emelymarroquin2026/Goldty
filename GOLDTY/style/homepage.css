@@ -1,0 +1,397 @@
+/* RESET Y BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffcf8;
+  min-height: 100vh;
+  color: #333;
+  overflow-x: hidden;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-color: #558b2f;
+  color: #fff;
+  width: 220px;
+  padding: 25px 15px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f0f0f0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.sidebar .icon {
+  font-size: 1.2rem;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+  flex: 1;
+  padding: 0;
+}
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.activities-section {
+  padding: 20px;
+}
+
+.header {
+  background-color: #558b2f;
+  color: #fff;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.activities-section h2 {
+  margin: 30px 0 15px;
+  font-size: 1.6rem;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.activity-box {
+  height: 120px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.activity-box i {
+  font-size: 2rem;      
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.activity-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;            
+  text-align: center;
+}
+
+
+.activity-box:hover i {
+  transform: scale(1.2); 
+  color: #fffbe0;       
+}
+
+/* colores POR IMPORTANCIA */
+.urgent {
+  background-color: #e53935;
+}
+
+.important {
+  background-color: #f7c03e;
+}
+
+.not-important {
+  background-color: #7cb342;
+}
+
+.activity-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+  cursor: pointer;
+}
+
+.labels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.labels div {
+  font-size: 0.85rem;
+  text-align: center;
+  font-weight: 600;
+  color: #444;
+}
+
+.activity-item {
+  text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .sidebar li {
+    margin: 0 10px;
+  }
+
+  /* ✅ Cambiado a 1 columna en tablets y móviles */
+  .activities-grid,
+  .labels {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .activities-grid,
+  .labels {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-box {
+    height: 90px;
+    font-size: 1rem;
+  }
+}
+
+/* BOTÓN EN EL HEADER */
+.menu-toggle {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 10px 15px;
+  float: right;
+}
+
+/* ESTILOS DEL HEADER CON BOTÓN ALINEADO */
+.header {
+  background-color: #558b2f;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MENÚ LATERAL */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Oculto por defecto */
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(90deg, #7cb342, #4caf50);
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+/* ORGANIZACIÓN DEL MENÚ */
+.sidebar h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .icon {
+  margin-right: 10px;
+}
+
+/* Estilos para enlaces dentro de las cajas de actividades */
+.activity-box {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fuerza el color blanco en todos los enlaces */
+.activity-box:link,
+.activity-box:visited,
+.activity-box:hover,
+.activity-box:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header {
+  background: linear-gradient(90deg,#4caf50 ,#7cb342 );
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid #338f37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Botón hamburguesa a la izquierda */
+.menu-toggle {
+  position: absolute;
+  left: 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Título centrado */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* -------- Ajuste de diseño responsive -------- */
+
+/* Evitar barra horizontal en tablets/móviles */
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+
+  /* Mantener sidebar como menú lateral oculto */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background: linear-gradient(90deg, #7cb342, #4caf50);
+    padding: 20px;
+    flex-direction: column;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+  }
+
+  /* Sidebar activo se despliega verticalmente */
+  .sidebar.active {
+    left: 0;
+  }
+
+  /* Lista de menú en columna */
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Ajustar grillas a 1 columna */
+  .activities-grid,
+  .labels {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Header con hamburguesa a la izquierda y texto centrado */
+.header {
+  background: linear-gradient(90deg,#4caf50 ,#7cb342);
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid #338f37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.menu-toggle {
+  position: absolute;
+  left: 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
